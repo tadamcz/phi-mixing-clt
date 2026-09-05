@@ -1,8 +1,12 @@
 > **Note.** This entire repository was machine-written by AI assistants at the direction of Tom Adamczewski. The Lean proof itself was written by GPT-6 Astra, as described below.
 
-# Ibragimov-Iosifescu conjecture for phi-mixing sequences (CLT), part (i)
+# Ibragimov–Iosifescu conjecture for φ-mixing sequences
 
 The counterexample construction and Lean disproof in this repository were obtained by **GPT-6 Astra**. The repository preserves the generated proof, recorded verification results, and subsequent assessments of misformalization risk and novelty.
+
+For background and the conjecture's statement, see [the Wikipedia article on the Ibragimov–Iosifescu conjecture for φ-mixing sequences](https://en.wikipedia.org/wiki/Ibragimov%E2%80%93Iosifescu_conjecture_for_%CF%86-mixing_sequences).
+
+The Lean disproof addresses Ibragimov's central limit theorem claim. If correct, it also rules out Iosifescu's stronger claim that the rescaled partial-sum process converges to Brownian motion: that convergence would imply the central limit theorem at time 1.
 
 The recorded verifier accepted the disproof with Lean's default kernel using only standard axioms.
 
