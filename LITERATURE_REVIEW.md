@@ -6,7 +6,7 @@ The precise target is a strictly stationary, centered, real-valued process with
 
 \[
 \phi(n)\to0,\qquad \mathbb E X_0^2<\infty,\qquad
-\sigma_n^2=\operatorname{Var}(S_n)\to\infty,
+\sigma_n^2=\mathrm{Var}(S_n)\to\infty,
 \]
 
 for which \(S_n/\sigma_n\) fails to converge in distribution to \(N(0,1)\). Here \(\phi\) is the uniform conditional-probability coefficient, including the supremum over all positive-probability conditioning events. The normalization is the actual standard deviation of the partial sum. These details distinguish this problem from several already-solved problems with almost identical titles.
