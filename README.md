@@ -49,7 +49,7 @@ Consequently the normalized sums converge along these times to a point mass at z
 
 ## Build and verify
 
-The project pins the environment of the recorded run: **Lean 4.27.0**, [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) commit `9cbe1d3c12998c786b7c2cd99ce28a21b6631f66`, Mathlib commit `a3a10db0e9d66acbebf76c5e6a135066525ac900`, and all transitive dependencies in [lake-manifest.json](lake-manifest.json). These values were read back from the benchmark's Docker image and match the sibling runs from the same benchmark. With [elan](https://github.com/leanprover/elan) installed:
+The project pins the environment of the recorded run: **Lean 4.27.0**, [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) commit `9cbe1d3c12998c786b7c2cd99ce28a21b6631f66`, Mathlib commit `a3a10db0e9d66acbebf76c5e6a135066525ac900`, and all transitive dependencies in [lake-manifest.json](lake-manifest.json). With [elan](https://github.com/leanprover/elan) installed:
 
 ```sh
 lake exe cache get
