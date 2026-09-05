@@ -47,11 +47,32 @@ $$
 
 Consequently the normalized sums converge along these times to a point mass at zero, which rules out convergence of the full sequence to $N(0,1)$. There is no contradiction with their having variance one: increasingly rare, large values retain the second moment even as the probability of any fixed nonzero-sized fluctuation tends to zero.
 
+## Build and verify
+
+The project pins the environment of the recorded run: **Lean 4.27.0**, [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) commit `9cbe1d3c12998c786b7c2cd99ce28a21b6631f66`, Mathlib commit `a3a10db0e9d66acbebf76c5e6a135066525ac900`, and all transitive dependencies in [lake-manifest.json](lake-manifest.json). These values were read back from the benchmark's Docker image and match the sibling runs from the same benchmark. With [elan](https://github.com/leanprover/elan) installed:
+
+```sh
+lake exe cache get
+lake build
+```
+
+This builds `Challenge.lean` (two expected `sorry` warnings for the conjecture statement and its `.disproof` stub) and `submission/Spec.lean` (one expected `sorry` warning for the conjecture statement, which the disproof does not use). To confirm the axiom dependencies of the disproof, run:
+
+```sh
+lake env lean --stdin <<'EOF'
+import Spec
+#print axioms IbragimovIosifescuConjectureForMixingSequences.ibragimov_iosifescu_conjecture_for_mixing_sequences.parts.i.disproof
+EOF
+```
+
+The expected output lists only `propext`, `Classical.choice`, and `Quot.sound`.
+
 ## Contents
 
 - `Challenge.lean` - the formal problem statement (docstring, definitions, the `sorry` theorem, and the `.disproof` companion).
 - `submission/` - the agent's kernel-checked submission (`Spec.lean` plus any auxiliary modules).
 - `info.json` - recorded verification output.
+- `lean-toolchain`, `lakefile.toml`, `lake-manifest.json` - pinned build environment (see above).
 - `final_messages.md` - the agent's own closing notes (untrusted self-report).
 - `ANALYSIS.md` - independent analysis of correctness and misformalization risk.
 - [LITERATURE_REVIEW.md](LITERATURE_REVIEW.md) - literature search, comparisons with earlier results, sources, and limitations of the novelty assessment.
