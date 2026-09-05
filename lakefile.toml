@@ -1,0 +1,18 @@
+name = "ibragimov_iosifescu_phi_mixing_clt"
+version = "0.1.0"
+defaultTargets = ["Challenge", "Submission"]
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures.git"
+rev = "9cbe1d3c12998c786b7c2cd99ce28a21b6631f66"
+
+# The original benchmark statement (contains the two required `sorry`s).
+[[lean_lib]]
+name = "Challenge"
+
+# The agent's kernel-checked submission, unchanged from the recorded run.
+[[lean_lib]]
+name = "Submission"
+srcDir = "submission"
+roots = ["Spec"]

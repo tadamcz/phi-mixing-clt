@@ -10,9 +10,7 @@ The Lean disproof addresses Ibragimov's central limit theorem claim. If correct,
 
 The recorded verifier accepted the disproof with Lean's default kernel using only standard axioms.
 
-The [literature review](LITERATURE_REVIEW.md) compares the result with earlier work and documents the search for a prior resolution through 2026-09-05. It found no earlier counterexample satisfying all the conjecture's hypotheses and identifies a 2023 scholarly source explicitly reporting the conjecture as open. The novelty assessment remains conditional on the proof's correctness.
-
-**Misformalization verdict (independent analysis):** Possibly new (confidence: high that the formal statement faithfully renders the informal conjecture and that the kernel-checked object is a genuine counterexample to it; the residual risks for "this settles the open problem" are only Lean/Mathlib soundness and an oversight in this audit)
+The [literature review](LITERATURE_REVIEW.md) compares the result with earlier work and documents the search for a prior resolution through 2026-09-05. It found no earlier counterexample satisfying all the conjecture's hypotheses and identifies a 2023 scholarly source explicitly reporting the conjecture as open.
 
 ## Informal summary of the argument
 
