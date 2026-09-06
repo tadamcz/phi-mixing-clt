@@ -7,7 +7,7 @@ The construction separates the typical size of a partial sum from its $L^2$ size
 **Theorem.** There exists a strictly stationary, centered, $\phi$-mixing sequence $(X_n)_{n\ge0}$ with $\mathbb E X_0^2<\infty$ such that, writing
 
 $$
-S_n=\sum_{t=0}^{n-1}X_t,\qquad \sigma_n^2=\operatorname{Var}(S_n),
+S_n=\sum_{t=0}^{n-1}X_t,\qquad \sigma_n^2=\mathrm{Var}(S_n),
 $$
 
 one has $\sigma_n^2\to\infty$, but along a strictly increasing sequence $(n_j)$,
@@ -245,7 +245,7 @@ The role of the variation cost is to make the distant past uniformly negligible,
 We next explain why the cost in (5) is the right one. For a bounded history function $H$, write
 
 $$
-\operatorname{var}_m(H)=
+\mathrm{var}_m(H)=
 \sup\{|H(x)-H(y)|:x\text{ and }y
 \text{ agree in their first }m\text{ entries}\}.
 $$
@@ -253,7 +253,7 @@ $$
 **Lemma 2 (Control of the inverse variation).** An infinite cascade with doubling cumulative memories and $\sum_i\beta_i<\infty$ has an inverse limit satisfying
 
 $$
-\operatorname{var}_m(H)\le d_m,
+\mathrm{var}_m(H)\le d_m,
 \qquad
 d_m=2\sum_{i:M_i>m}\beta_i.
 \tag{13}
@@ -275,7 +275,7 @@ $$
 **Lemma 3 (Uniform forgetting).** Suppose the innovation law is the law of $J+Z$, where $Z\sim N(0,1)$ is independent of $J$. If the inverse rule in (1) has bounded $H$ and
 
 $$
-\operatorname{var}_m(H)\le d_m,\qquad
+\mathrm{var}_m(H)\le d_m,\qquad
 \sum_m d_m^2<\infty,
 $$
 
@@ -411,7 +411,7 @@ $$
 Then, for every $R>0$ with $R\ge2nB$,
 
 $$
-\operatorname{Var}(S_n)\ge\frac n4e_\xi(R).
+\mathrm{Var}(S_n)\ge\frac n4e_\xi(R).
 \tag{20}
 $$
 
@@ -424,8 +424,8 @@ $$
 Independence gives
 
 $$
-\operatorname{Var}(T_n)
-=\operatorname{Cov}\!\left(\sum_{t<n}\xi_t,T_n\right)
+\mathrm{Var}(T_n)
+=\mathrm{Cov}\!\left(\sum_{t<n}\xi_t,T_n\right)
 =ne_\xi(R).
 $$
 
@@ -438,7 +438,7 @@ $$
 \le\frac12ne_\xi(R).
 $$
 
-Thus $\operatorname{Cov}(S_n,T_n)\ge\operatorname{Var}(T_n)/2$. Expanding the nonnegative quantity $\operatorname{Var}(S_n-T_n/2)$ gives (20). $\square$
+Thus $\mathrm{Cov}(S_n,T_n)\ge\mathrm{Var}(T_n)/2$. Expanding the nonnegative quantity $\mathrm{Var}(S_n-T_n/2)$ gives (20). $\square$
 
 The use of the first moment of $T_n$ in the error estimate is what makes rare, large innovations effective.
 
@@ -459,7 +459,7 @@ $$
 large enough that the stationary sum $S_{n_j}^{(j)}$ formed from this cascade and the innovation law $\nu_j$ satisfies
 
 $$
-\operatorname{Var}(S_{n_j}^{(j)})
+\mathrm{Var}(S_{n_j}^{(j)})
 \le2n_j\varepsilon_j^4.
 \tag{21}
 $$
@@ -547,7 +547,7 @@ $$
 \begin{aligned}
 \mathbb P\!\left(|S_{n_j}|>a\sigma_{n_j}\right)
 &\le\varepsilon_j+
-\frac{\operatorname{Var}(S_{n_j}^{(j)})}{a^2\sigma_{n_j}^2}\\
+\frac{\mathrm{Var}(S_{n_j}^{(j)})}{a^2\sigma_{n_j}^2}\\
 &\le\varepsilon_j+\frac{16}{a^2}\varepsilon_j^3
 \longrightarrow0.
 \end{aligned}
